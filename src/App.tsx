@@ -6,7 +6,9 @@ import MapPage from './components/MapPage';
 import { APIProvider } from '@vis.gl/react-google-maps';
 
 function App() {
-  const googleMapsApiKey = process.env.GOOGLE_MAPS_JAVASCRIPT_KEY;
+  const googleMapsApiKey =
+    process.env.REACT_APP_GOOGLE_MAPS_JS_API_KEY ||
+    process.env.GOOGLE_MAPS_JS_API_KEY;
 
   if (!googleMapsApiKey) {
     return (
